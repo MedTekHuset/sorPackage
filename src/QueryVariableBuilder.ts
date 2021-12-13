@@ -14,20 +14,24 @@ export class QueryVariableBuilder {
         return this;
     }
 
-    setQueryVariable(innerQueryVar) {
+    setQueryVariable(innerQueryVar: {} | string) {
         this.innerQueryVar = innerQueryVar instanceof Object ? JSON.stringify(innerQueryVar) : innerQueryVar;
+        this.updateQuery()
         return this;
     }
 
-    constructQuery() {
+    private updateQuery() {
         var innerQV = { query: this.innerQueryVar };
         this.queryVariable[this.queryType] = innerQV;
     }
 
-    addVariable() {}
+    addVariable(varKey: any, varVal: any) {
+        var innerQuery = this.queryVariable[this.queryType]
+        innerQuery[varKey] = varVal
+        return this
+    }
 
     getQuery() {
-        this.constructQuery();
         return JSON.stringify(this.queryVariable);
     }
 }

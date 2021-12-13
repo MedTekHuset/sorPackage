@@ -54,3 +54,10 @@ test('QueryVariable builder with object query', async () => {
     console.log(res)
     expect(res).toEqual(res)
 })
+
+test('QueryVariable builder add variable', async () => {
+    var queryVBuilder = new QueryVariableBuilder();
+    var res = queryVBuilder.setQueryType('parentSorInput').setQueryVariable({ "SORkode": "1195041000016003" }).addVariable("depth", 2).getQuery()
+    console.log(res)
+    expect(res).toEqual(res)
+})
