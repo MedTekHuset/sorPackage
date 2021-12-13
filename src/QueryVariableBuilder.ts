@@ -42,7 +42,10 @@ export class QueryVariableBuilder {
         innerQuery[varKey] = varVal
         return this
     }
-
+    /**
+     * 
+     * @returns {[String]} GraphQL QueryVariable as String
+     */
     getQuery() {
         return JSON.stringify(this.queryVariable);
     }
