@@ -4,6 +4,7 @@
   "description": "Sor Package",
   "main": "index.js",
   "scripts": {
+    "prepare": "npm run build",
     "test": "jest --config jestconfig.json",
     "build": "tsc",
     "format": "prettier --write \"src/**/*.ts\"",
