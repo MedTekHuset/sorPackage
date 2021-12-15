@@ -14,7 +14,7 @@ export class SorFacade {
         this.instantiateClient();
     }
 
-    instantiateClient() {
+    private instantiateClient() {
         this.gqlClient = new GraphQLClient(this.sorServerAddress);
     }
 
