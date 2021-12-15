@@ -2,7 +2,7 @@
   "name": "sorpackage",
   "version": "1.0.0",
   "description": "Sor Package",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "prepare": "npm run build",
     "test": "jest --config jestconfig.json",
