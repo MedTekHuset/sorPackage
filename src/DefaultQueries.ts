@@ -35,6 +35,41 @@ export class DefaultQueries {
             }
         }
     `;
+    
+        nearestEDBLookupQuery = gql`
+        query findNearestEDB($findRowInput: FindRowInput!) {
+            findNearestEDB(findRowInput: $findRowInput) {
+                id
+                Enhedsnavn
+                Enhedstype
+                SORtype
+                Gaeldende_fra_dato
+                Ophoert_dato
+                Sidst_aendret_dato
+                SghAfdkode
+                SORkode
+                ParentSORkode
+                Institutionsejer
+                Sundhedsinstitution
+                Ydernummer
+                Lokalkode
+                Telefon
+                Fax
+                Email
+                Hjemmeside
+                Lokationsnummer
+                Region
+                EDBsystem
+                Systemleverandoer
+                Netoperatoer
+                Nedarvningsstatus
+                Lokationsnummerstatus
+                P_Postnummer
+                P_By
+                Postadresse
+            }
+        }
+    `;
 
     sorLookupMultipleQuery = gql`
         query SorLookupMultiple($queryInput: QueryInput!) {
